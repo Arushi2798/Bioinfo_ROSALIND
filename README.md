@@ -1,2 +1,4 @@
 # Bioinfo_ROSALIND
-bioinfo practise
+<br>
+This repo contains my solutions to ROSALIND practise problems.
+<br>
