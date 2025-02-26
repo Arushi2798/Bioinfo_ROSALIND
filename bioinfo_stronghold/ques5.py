@@ -10,12 +10,23 @@ Return: The ID of the string having the highest GC-content, followed by the GC-c
 
 file =open("file1.txt","r")
 content=file.readlines()
-read=[]
+read,id=[],[]
 # print(content)
 for i in range(len(content)):
     if content[i].startswith(">"):
-        continue
+        id.append(content[i])
     else:
         read.append(content[i])
 
-print(read)
+gc=0
+d={}
+for each in read:
+    for i in range(len(each)):
+        if each[i]=="G" or each[i]=="C":
+            gc+=1
+    gcp=(gc/len(each))*100
+    d[each]=gcp
+
+
+# print(d)
+# print(read)
