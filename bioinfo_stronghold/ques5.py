@@ -12,6 +12,7 @@ file =open("file1.txt","r")
 content=file.read()
 n=content.count(">")
 # print(content)
+read=[]
 
 for i in range(len(content)):
     if content[i].startswith(">"):
