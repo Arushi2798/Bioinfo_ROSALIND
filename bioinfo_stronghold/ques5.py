@@ -23,7 +23,7 @@ d={}
 for i in range(len(content1)):
     gc,total_len=0,0
     text=content1[i].split("\n ")
-    text.pop()
+    # text.pop()
     # print(text)
     for j in range(1,len(text)):
         # print(text[j])
@@ -45,5 +45,5 @@ for key,val in d.items():
     if val > max_val:
         max_val= val
         max_id = key
-print(id, max_val)
 
+print(f'{max_id} \n  {max_val}')
