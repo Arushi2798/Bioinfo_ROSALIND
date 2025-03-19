@@ -9,17 +9,18 @@ Given: At most 10 DNA strings in FASTA format (of length at most 1 kbp each).
 Return: The ID of the string having the highest GC-content, followed by the GC-content of that string. Rosalind allows for a default error of 0.001 in all decimal answers unless otherwise stated; please see the note on absolute error below."""
 
 file =open("file1.txt","r")
-content=file.read()
-n=content.count(">")
-# print(content)
-read=[]
+content=file.readlines()
+for each in content:
+    content1=(" ".join(content)).split(">")
 
-for i in range(len(content)):
-    if content[i].startswith(">"):
-        id.append(content[i])
-    else:
-        read.append(content[i])
+# print(content1[0])
+content1.pop(0)
+# print(content1[0])
+# print(len(content1))
 
+
+for i in range(len(content1)):
+    pass
 gc=0
 d={}
 for each in read:
