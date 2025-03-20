@@ -8,11 +8,12 @@ import random
 k,m,n=2,2,2
 p=k+m+n
 
-indiv=[]
-indiv.append(random.randint(0,p))
-indiv.append(random.randint(0,p))
+ind1=random.randint(0,p)
+ind2=random.randint(0,p)
 
-# print(indiv)
-#in case of homozygous dominant
-#in case of heterozygous
-#in case of homozygous recessive
+print(ind1,ind2)
+#in case of homozygous dominant progeny
+
+#in case of heterozygous progeny
+
+#in case of homozygous recessive progeny
