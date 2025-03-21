@@ -7,11 +7,24 @@ Return: The probability that two randomly selected mating organisms will produce
 import random
 k,m,n=2,2,2
 p=k+m+n
+parents=[]
+for j in range(k):
+    parents.append("AA")
+for j in range(m):
+    parents.append("Aa")
+for j in range(n):
+    parents.append("aa")
+# print(parents)
 
-# ind1=random.randint(0,p)
-# ind2=random.randint(0,p)
 
-# print(ind1,ind2)
+while True:
+    ind1=random.randint(0,p)
+    ind2=random.randint(0,p)
+    if ind1 != ind2:
+        break
+
+print(ind1,ind2)
+#parents could be AA, Aa, aa
 #in case of homozygous dominant progeny AA
 
 #in case of heterozygous progeny Aa
