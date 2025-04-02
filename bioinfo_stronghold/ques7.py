@@ -14,7 +14,7 @@ for j in range(m):
     parents.append("Aa")
 for j in range(n):
     parents.append("aa")
-# print(parents)
+print(parents)
 
 
 while True:
@@ -23,7 +23,7 @@ while True:
     if ind1 != ind2:
         break
 
-print(ind1,ind2)
+# print(ind1,ind2)
 #parents could be AA, Aa, aa
 #in case of homozygous dominant progeny AA
 

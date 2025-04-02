@@ -36,3 +36,15 @@
 
 ##
 #bioinfo
+lenth=0
+gc=0
+s="CCACCCTCG"
+for each in s:
+    if each =="A" or each=="T":
+        lenth+=1
+    elif each== "G" or each=="C":
+        lenth+=1
+        gc+=1
+
+print(f'gc: {gc} for len {lenth}')
+print((gc/lenth)*100)
