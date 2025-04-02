@@ -24,12 +24,17 @@ while True:
         break
 a=parents[ind1]
 b=parents[ind2]
-print(ind1,ind2)
-print(a,b)
+# print(ind1,ind2)
+# print(a,b)
 
+#no of dominant allel
+dom= k*2 + m
+#no of recessive allel
+rec= m+n*2
 #parents could be AA, Aa, aa
 #in case of homozygous dominant progeny AA
-
+if a==b:
+    pass
 #in case of heterozygous progeny Aa
 
 #in case of homozygous recessive progeny aa
