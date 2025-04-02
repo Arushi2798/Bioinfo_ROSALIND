@@ -14,16 +14,19 @@ for j in range(m):
     parents.append("Aa")
 for j in range(n):
     parents.append("aa")
-print(parents)
+# print(parents)
 
 
 while True:
-    ind1=random.randint(0,p)
-    ind2=random.randint(0,p)
+    ind1=random.randint(0,p-1)
+    ind2=random.randint(0,p-1)
     if ind1 != ind2:
         break
+a=parents[ind1]
+b=parents[ind2]
+print(ind1,ind2)
+print(a,b)
 
-# print(ind1,ind2)
 #parents could be AA, Aa, aa
 #in case of homozygous dominant progeny AA
 
