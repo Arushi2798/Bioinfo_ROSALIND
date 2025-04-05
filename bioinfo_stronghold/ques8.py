@@ -30,6 +30,19 @@ s="AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA"
 
 p=""
 
-for i in range(0,len(s)-2,4):
-    if s[i]+s[i+1]+s[i+2] == "AUG":
+def findstart(s):
+    for i in range(len(s)-2):
+        codon = s[i]+s[i+1]+s[i+2]
+        if codon == "AUG":
+            return i
+            
+            
+index=findstart(s)
+for i in range(index,len(s)-2,3):
+    codon = s[i]+s[i+1]+s[i+2]
+    if codon == "UAA" or codon== "UGA" or codon== "UAG":
+        break
+    else:
+        p+=d.get(codon)
         
+print(p)
