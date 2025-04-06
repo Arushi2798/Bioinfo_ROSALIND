@@ -19,7 +19,7 @@ def creatematrix(col):
 
 def profilematrix(matrix,strings):
     for i in range(len(strings)):
-        for j in range(strings[0]):
+        for j in range(len(strings[0])):
             if strings[i][j]=="A":
                 matrix[0][j]+=1
             if strings[i][j]=="C":
@@ -33,5 +33,15 @@ def profilematrix(matrix,strings):
 
 matrix=creatematrix(len(strings[0]))
 
-ans=profilematrix(matrix)
-# print(matrix)
+ans=profilematrix(matrix,strings)
+# print(ans)
+
+str_ind={"A":0,"C":1,"G":2,"T":3}
+consensus=''
+for each in ans:
+    # print(each)
+    max=0
+    for i in range(len(each)):
+        if each[i]>max:
+            max=each[i]
+        
