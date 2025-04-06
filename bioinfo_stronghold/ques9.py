@@ -17,24 +17,26 @@ Return: All locations of t as a substring of s."""
 # file =open("file4.txt","r")
 # content=file.read()
 
-s="GATATATGCATATACTT"
-t="ATAT"
-
+s="""GAATTGGGTGGCGGGGTGGCAGTTCAGGGGTGGCATACATGGGTGGCTGGGGTGGCGGGTGGCACAATCAGCCGGGTGGCACGTTTTCATGGGTGGCAGGGTGGCGGGTGGCGGGTGGCCGCGGGGGTGGCAATTGGGTGGCCCGGGTGGCACCAGGGTGGCTGGGGTGGCGAGTCGGGTGGCGCGGGGTGGCGGGTGGCGCCGGGTGGCTGGGTGGCCGGGTGGCGGGTGGCGGGGGTGGCGGGTGGCCGGCGGGGTGGCACGGGTGGCCTAACCATCGGGTGGCCTTCGGGTGGCAGTGGGTGGCGGGTGGCAAGGGTGGCATTCGGGTGGCTGTGCCGGGTGGCAGGGGGGTGGCGACGGGTGGCCAGGGGTGGCAGTGGGTGGCGGGTGGCTGGGTGGCAGGGTGGCGGGTGGCTGGGTGGCCCCAGCTGGGTGGCGGGTGGCAGGGGTGGCGGCCCAGGGGTGGCACGGGTGGCTGGGTGGCGGGTGGCCTTGGGTGGCGGGTGGCGGGTGGCATGGTGGGTGGCCGCCGGGTGGCAAACGTAAGGGGTGGCAGGGTGGCGGGGTGGCGGGTGGCCCGGGTGGCATTTGTGGGTGGCATGGGGTGGCGGGTGGCGGGGTGGCGCTTTATCCGGGGTGGCATTGGGTGGCCCTGGGGTGGCCGATCTTTGGGGTGGCTGACGGGTGGCAGGGTGGCGGGTGGCGAGGAACGGGTGGCCTGGGGTGGCGGGTGGCATGGGTGGCCTAGGGTGGCAGTGGGTGGCGGGTGGCGTTTGTTAAGGGGTGGCGGCGGGGTGGCTGGGTGGCGGGTGGCCCGAGGGTGGCCGGGTGGCGGGGTGGCCATGGGTGGCGGGTGGCGGGGTGGCCCTTTGGGTGGCCCCGTCGGGTGGC"""
+t="GGGTGGCGG"
+# s="GATATATGCATATACTT"
+# t="ATAT"
 index=[]
+print(s[226:(len(t)+226)])
 
-if len(t)>len(s):
-    print("wrong input")
-    exit
-else:
-    for i in range(len(s)):
-        if t[0]==s[i]:
-            # print("S")
-            codon=''
-            for j in range(len(t)):
-                codon+=s[i+j]
-                # print(codon)
-            if codon == t:
-                # pass
-                print(index)
-        # else:
-        #     print("s")
+# if len(t)>len(s):
+#     print("wrong input")
+#     exit
+# else:
+#     for i in range(len(s)-(len(t)+1)):
+#         if t[0]==s[i]:
+#             # print("S")
+#             codon=''
+#             for j in range(len(t)):
+#                 codon+=s[i+j]
+#                 # print(codon)
+#             if codon == t:
+#                 index.append(i+1)
+
+# print(index)
+        
