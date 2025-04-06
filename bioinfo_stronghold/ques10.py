@@ -33,15 +33,21 @@ def profilematrix(matrix,strings):
 
 matrix=creatematrix(len(strings[0]))
 
-ans=profilematrix(matrix,strings)
+profile=profilematrix(matrix,strings)
 # print(ans)
 
-str_ind={"A":0,"C":1,"G":2,"T":3}
+str_ind={0:"A",1:"C",2:"G",3:"T"}
+
 consensus=''
-for each in ans:
-    # print(each)
-    max=0
-    for i in range(len(each)):
-        if each[i]>max:
-            max=each[i]
-        
+
+for i in range(len(profile[0])):
+    max_val=0
+    for j in range(len(profile)):
+        if max_val < profile[j][i]:
+            max_val = profile[j][i]
+            indx = j
+
+    consensus += str_ind.get(indx)
+    # print(indx)
+
+print(consensus)
