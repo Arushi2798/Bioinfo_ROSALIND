@@ -20,3 +20,21 @@ Return: All locations of t as a substring of s."""
 s="GATATATGCATATACTT"
 t="ATAT"
 
+index=[]
+
+if len(t)>len(s):
+    print("wrong input")
+    exit
+else:
+    for i in range(len(s)):
+        if t[0]==s[i]:
+            # print("S")
+            codon=''
+            for j in range(len(t)):
+                codon+=s[i+j]
+                # print(codon)
+            if codon == t:
+                # pass
+                print(index)
+        # else:
+        #     print("s")
