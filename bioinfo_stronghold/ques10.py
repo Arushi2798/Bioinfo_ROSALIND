@@ -28,7 +28,6 @@ def profilematrix(matrix,strings):
                 matrix[3][j]+=1    
     return matrix
 
-
 matrix=creatematrix(len(strings[0]))
 
 profile=profilematrix(matrix,strings)
@@ -48,3 +47,9 @@ for i in range(len(profile[0])):
     # print(indx)
 
 print(consensus)
+
+key_list=str_ind.keys()
+newdict=dict.fromkeys(key_list)
+for i in range(len(profile)):
+    newdict[i]=profile[i]
+print(newdict)
