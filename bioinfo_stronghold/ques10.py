@@ -8,8 +8,6 @@ Return: A consensus string and profile matrix for the collection. (If several po
 
 strings=['ATCCAGCT','GGGCAACT','ATGGATCT','AAGCAACC','TTGGAACT','ATGCCATT','ATGGCACT']
 
-
-
 def creatematrix(col):
     m=[[],[],[],[]]
     for i in range(4):
@@ -34,7 +32,6 @@ def profilematrix(matrix,strings):
 matrix=creatematrix(len(strings[0]))
 
 profile=profilematrix(matrix,strings)
-# print(ans)
 
 str_ind={0:"A",1:"C",2:"G",3:"T"}
 
