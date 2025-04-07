@@ -6,7 +6,24 @@ Given: A collection of at most 10 DNA strings of equal length (at most 1 kbp) in
 
 Return: A consensus string and profile matrix for the collection. (If several possible consensus strings exist, then you may return any one of them.)"""
 
-strings=['ATCCAGCT','GGGCAACT','ATGGATCT','AAGCAACC','TTGGAACT','ATGCCATT','ATGGCACT']
+file =open("file4.txt","r")
+content=file.readlines()
+s=''
+strings=[]
+
+for each in content:
+    if each[0]==">":
+        s+="\n"
+        # content.remove(each)
+    else:
+        each=each.strip('\n')
+        s+=each
+
+strings=s.split("\n")
+strings.pop(0)
+# print(len(strings))
+
+# strings=['ATCCAGCT','GGGCAACT','ATGGATCT','AAGCAACC','TTGGAACT','ATGCCATT','ATGGCACT']
 
 def creatematrix(col):
     m=[[],[],[],[]]
@@ -47,9 +64,16 @@ for i in range(len(profile[0])):
     # print(indx)
 
 print(consensus)
+newdict={}
+new_key=["A","C","G","T"]
+# key_list=str_ind.keys()
+# newdict=dict.fromkeys(key_list)
+for i in range(len(new_key)):
+    newdict[new_key[i]]=profile[i]
+# print(newdict)
 
-key_list=str_ind.keys()
-newdict=dict.fromkeys(key_list)
-for i in range(len(profile)):
-    newdict[i]=profile[i]
-print(newdict)
+
+for each in newdict:
+    print("\n",each,end=": ")
+    for i in newdict[each]:
+        print(i, end=" ")
