@@ -5,6 +5,7 @@ and t.
 Given: Two DNA strings sand t of equal length (not exceeding 1 kbp).
 
 Return: The Hamming distance dH(s,t)"""
+
 s="GAGCCTACTAACGGGAT"
 t="CATCGTAATGACGGCCT"
 dh=0

@@ -70,5 +70,6 @@ def rabbit(n,k):
     return ans
 
 print(rabbit(40,2))
-print(time.time()-start)
+# print(time.time()-start)
 
+# print(memo)
