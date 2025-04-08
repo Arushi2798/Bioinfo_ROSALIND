@@ -14,7 +14,6 @@ strings=[]
 for each in content:
     if each[0]==">":
         s+="\n"
-        # content.remove(each)
     else:
         each=each.strip('\n')
         s+=each
