@@ -11,7 +11,9 @@ Given: Positive integers n≤40 and k≤5.
 
 Return: The total number of rabbit pairs that will be present after n months, if we begin with 1 pair and in each generation, every pair of reproduction-age rabbits produces a litter of k
  rabbit pairs (instead of only 1 pair)."""
+
 import time
+
 # a,b=1,1
 # n=29
 # k=4
@@ -54,9 +56,9 @@ memo={}
 start=time.time()
 # print(start)
 def rabbit(n,k):
-    args=(n,k)
-    if args in memo:
-        return memo[args]
+    #args=(n,k)
+    if n in memo: #give args instead of n
+        return memo[n] #give memo[args] instead of memo[n]
     
     if n==1:
         return 1
@@ -64,7 +66,7 @@ def rabbit(n,k):
         return 1
     else:
         ans=(rabbit(n-1,k) + rabbit(n-2,k) *k)
-    memo[args]=ans
+    memo[n]=ans#give memo[args] instead of memo[n]
     return ans
 
 print(rabbit(40,2))
