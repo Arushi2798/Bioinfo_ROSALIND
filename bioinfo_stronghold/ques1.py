@@ -18,3 +18,11 @@ for each in s:
             g+=1
 
 print(f'{a} {c} {g} {t}')
+
+##another attempt
+
+# A=s.count("A")
+# G=s.count("G")
+# T=s.count("T")
+# C=s.count("C")
+# print(A,C,G,T)
