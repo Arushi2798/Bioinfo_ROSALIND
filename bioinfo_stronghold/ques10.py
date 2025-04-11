@@ -76,3 +76,9 @@ for each in newdict:
     print("\n",each,end=": ")
     for i in newdict[each]:
         print(i, end=" ")
+
+
+## another attempt
+
+# import numpy as np
+# profile= np.zeros()

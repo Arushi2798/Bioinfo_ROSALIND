@@ -14,3 +14,7 @@ if len(s)==len(t):
         if s[i]!=t[i]:
             dh+=1
 print(dh)
+
+## another attempt
+# def hamming(s,t):
+#     return (len(list(filter(lambda pair: pair[0]!=pair[1],zip(s,t)))))
